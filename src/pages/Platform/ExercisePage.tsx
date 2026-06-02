@@ -52,9 +52,7 @@ export default function ExercisePage({ forcedCategory }: { forcedCategory?: Lear
 useEffect(() => {
     // 1. Gera o próximo exercício baseado no modo selecionado nos SessionBlocks
     const next = generateNextExercise(state, cat, mode);
-    
-    // 2. LOG DE SEGURANÇA: Verifique no console do navegador se 'next.prompt' tem a frase
-    console.log("Próximo exercício:", next);
+  
     
     setPrompt(next);
     setUserAnswer("");
@@ -160,7 +158,6 @@ useEffect(() => {
           disabled={disabled}
           
         />
-console.log("DEBUG - Prompt atual:", prompt);
       </div>
     </PlatformShell>
   );
