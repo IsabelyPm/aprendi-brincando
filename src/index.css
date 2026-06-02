@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base */
+    --background: 30 30% 98%;
+    --foreground: 0 60% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 60% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 60% 6%;
+
+    /* Brand: Vinho Profundo #1A0505 */
+    --primary: 0 60% 6%;
+    --primary-foreground: 30 30% 98%;
+
+    /* Brand: Coral Vibrante #FF3D5A */
+    --accent: 351 100% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 30 40% 96%;
+    --secondary-foreground: 0 60% 6%;
+
+    --muted: 30 25% 94%;
+    --muted-foreground: 0 15% 30%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 20% 90%;
+    --input: 0 20% 90%;
+    --ring: 351 100% 62%;
+
+    --radius: 1rem;
+
+    /* Tokens */
+    --gradient-hero: radial-gradient(ellipse at top right, hsl(351 100% 62% / 0.18), transparent 60%),
+                     linear-gradient(180deg, hsl(30 50% 98%) 0%, hsl(30 40% 95%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(351 100% 62%) 0%, hsl(355 95% 55%) 100%);
+    --gradient-wine: linear-gradient(135deg, hsl(0 60% 6%) 0%, hsl(0 50% 14%) 100%);
+    --shadow-playful: 0 20px 50px -20px hsl(351 100% 62% / 0.45);
+    --shadow-soft: 0 10px 30px -10px hsl(0 60% 6% / 0.15);
+    --shadow-wine: 0 20px 50px -20px hsl(0 60% 6% / 0.4);
+    --transition-bounce: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* High contrast mode toggle */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 60 100% 95%;
+    --card: 0 0% 5%;
+    --card-foreground: 60 100% 95%;
+    --primary: 60 100% 95%;
+    --primary-foreground: 0 0% 0%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 60 100% 90%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 60 100% 95%;
+    --border: 60 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-size: var(--a11y-font-scale, 100%);
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-coral { background: var(--gradient-coral); }
+  .bg-gradient-wine { background: var(--gradient-wine); }
+  .shadow-playful { box-shadow: var(--shadow-playful); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-wine { box-shadow: var(--shadow-wine); }
+  .transition-bounce { transition: var(--transition-bounce); }
+}
