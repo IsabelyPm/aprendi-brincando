@@ -326,9 +326,9 @@ const Index = () => {
                 <p className="text-xs font-bold text-slate-400 mt-1 mb-6">Pronta para o Papel</p>
                 
                 <Link 
-                  to={`/materiais/${item.id}`} 
-                  className="..."
-                >
+                to={`/pdfs?categoria=${item.id}`}
+                className="mt-auto w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-800 py-4 text-sm font-black text-white shadow-[0_4px_0_#0F172A] hover:bg-rose-500 hover:shadow-[0_4px_0_#9F1239] transition-all"
+              >
                   <Download className="h-4 w-4 stroke-[3]" /> Explorar Caderno
                 </Link>
               </div>
