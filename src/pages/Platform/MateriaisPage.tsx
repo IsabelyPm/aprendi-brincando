@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Download, Sparkles, Layers, BookOpen, ArrowLeft, Heart } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import mascot from "@/assets/mascot.png";
 
 const MATERIAL_CATEGORIES = {
   vogais: {
@@ -10,10 +11,10 @@ const MATERIAL_CATEGORIES = {
     activeColor: "bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-rose-200",
     borderColor: "border-pink-200",
     files: [
-      { name: "Circule as Vogais.pdf", path: "/files/vogais/Circule as Vogais.pdf" },
-      { name: "Complete as Vogais.pdf", path: "/files/vogais/Complete as Vogais.pdf" },
-      { name: "Contorne as Vogais.pdf", path: "/files/vogais/Contorne as Vogais.pdf" },
-      { name: "Ligando as Vogais.pdf", path: "/files/vogais/Ligando as Vogais.pdf" },
+      { name: "Circule as Vogais.pdf", path: "files/vogais/Circule as Vogais.pdf" },
+      { name: "Complete as Vogais.pdf", path: "files/vogais/Complete as Vogais.pdf" },
+      { name: "Contorne as Vogais.pdf", path: "files/vogais/Contorne as Vogais.pdf" },
+      { name: "Ligando as Vogais.pdf", path: "files/vogais/Ligando as Vogais.pdf" },
     ]
   },
   silabas: {
@@ -22,11 +23,11 @@ const MATERIAL_CATEGORIES = {
     activeColor: "bg-gradient-to-r from-emerald-400 to-green-500 text-white shadow-green-200",
     borderColor: "border-green-200",
     files: [
-      { name: "Conte as Sílabas.pdf", path: "/files/silabas/Conte as Sílabas.pdf" },
-      { name: "Desafio das Sílabas.pdf", path: "/files/silabas/Desafio das Sílabas.pdf" },
-      { name: "Descubra as Sílabas.pdf", path: "/files/silabas/Descubra as Sílabas.pdf" },
-      { name: "Monte as Sílabas.pdf", path: "/files/silabas/Monte as Sílabas.pdf" },
-      { name: "Recorte as Sílabas.pdf", path: "/files/silabas/Recorte as Sílabas.pdf" },
+      { name: "Conte as Sílabas.pdf", path: "files/silabas/Conte as Sílabas.pdf" },
+      { name: "Desafio das Sílabas.pdf", path: "files/silabas/Desafio das Sílabas.pdf" },
+      { name: "Descubra as Sílabas.pdf", path: "files/silabas/Descubra as Sílabas.pdf" },
+      { name: "Monte as Sílabas.pdf", path: "files/silabas/Monte as Sílabas.pdf" },
+      { name: "Recorte as Sílabas.pdf", path: "files/silabas/Recorte as Sílabas.pdf" },
     ]
   },
   palavras: {
@@ -35,12 +36,12 @@ const MATERIAL_CATEGORIES = {
     activeColor: "bg-gradient-to-r from-amber-400 to-orange-500 text-white shadow-amber-200",
     borderColor: "border-amber-200",
     files: [
-      { name: "Cole a imagem na palavra.pdf", path: "/files/palavras/Cole a imagem na palavra.pdf" },
-      { name: "Complete a tabela de palavras.pdf", path: "/files/palavras/Complete a tabela de palavras.pdf" },
-      { name: "Desembaralhe as palavras.pdf", path: "/files/palavras/Desembaralhe as palavras.pdf" },
-      { name: "Ligue as frutas.pdf", path: "/files/palavras/Ligue as frutas.pdf" },
-      { name: "Palavras e Figuras.pdf", path: "/files/palavras/Palavras e Figuras.pdf" },
-      { name: "Pinte as letras.pdf", path: "/files/palavras/Pinte as letras.pdf" },
+      { name: "Cole a imagem na palavra.pdf", path: "files/palavras/Cole a imagem na palavra.pdf" },
+      { name: "Complete a tabela de palavras.pdf", path: "files/palavras/Complete a tabela de palavras.pdf" },
+      { name: "Desembaralhe as palavras.pdf", path: "files/palavras/Desembaralhe as palavras.pdf" },
+      { name: "Ligue as frutas.pdf", path: "files/palavras/Ligue as frutas.pdf" },
+      { name: "Palavras e Figuras.pdf", path: "files/palavras/Palavras e Figuras.pdf" },
+      { name: "Pinte as letras.pdf", path: "files/palavras/Pinte as letras.pdf" },
     ]
   }
 };
@@ -96,7 +97,7 @@ export default function MateriaisPage() {
           <div className="relative mb-4 group">
             <div className="absolute inset-0 bg-rose-200 rounded-full blur-xl opacity-50 group-hover:opacity-80 transition-opacity" />
             <img 
-              src="/src/assets/mascot.png" 
+              src={mascot}
               alt="Mascote Moranguinho" 
               className="w-52 h-52  object-contain relative z-10 animate-bounce duration-1000 selection:bg-transparent"
               style={{ animationDuration: '3s' }}
