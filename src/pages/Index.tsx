@@ -149,7 +149,6 @@ const Index = () => {
               e atividades para baixar. Feito por quem ama a educação infantil!
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              {/* CORREÇÃO: Mudado de href="/plataforma" para Link to="/plataforma" */}
               <Link
                 to="/plataforma"
                 className="group inline-flex items-center gap-2.5 rounded-3xl bg-gradient-to-r from-rose-400 to-pink-500 px-8 py-5 font-black text-white text-lg shadow-[0_8px_0_#C93B56] hover:translate-y-[-2px] active:translate-y-[4px] active:shadow-[0_4px_0_#C93B56] transition-all"
@@ -326,10 +325,9 @@ const Index = () => {
                 </h4>
                 <p className="text-xs font-bold text-slate-400 mt-1 mb-6">Pronta para o Papel</p>
                 
-                {/* CORREÇÃO: Mudado de href para Link to do React Router */}
                 <Link 
-                  to={`/materiais?categoria=${item.id}`} 
-                  className="mt-auto w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-800 py-4 text-sm font-black text-white shadow-[0_4px_0_#0F172A] hover:bg-rose-500 hover:shadow-[0_4px_0_#9F1239] transition-all"
+                  to={`/materiais/${item.id}`} 
+                  className="..."
                 >
                   <Download className="h-4 w-4 stroke-[3]" /> Explorar Caderno
                 </Link>
@@ -339,7 +337,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Caixa de Ação Final */}
       <section className="py-12 relative z-10">
         <div className="container">
           <div className="relative overflow-hidden rounded-[50px] bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 p-12 text-center shadow-[0_15px_0_#BE123C] max-w-5xl mx-auto border-4 border-white/20">
@@ -350,7 +347,7 @@ const Index = () => {
               <p className="mt-4 text-white/95 font-bold text-base">
                 Acesse nossa área de exercícios aberta agora mesmo e divirta-se aprendendo!
               </p>
-              {/* CORREÇÃO: Ajustado de href="/canhao" para apontar para a rota certa da /plataforma via Link */}
+              
               <Link
                 to="/plataforma"
                 className="mt-8 inline-flex items-center gap-2.5 rounded-2xl bg-slate-800 px-8 py-5 font-black text-white hover:bg-white hover:text-rose-500 shadow-[0_6px_0_#000] active:translate-y-1 active:shadow-none transition-all"
