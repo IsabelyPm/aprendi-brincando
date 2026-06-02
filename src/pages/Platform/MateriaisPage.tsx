@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { Download, Sparkles, Layers, BookOpen, ArrowLeft, Heart } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import mascot from "@/assets/mascot.png";
@@ -82,13 +82,12 @@ export default function MateriaisPage() {
 
       <div className="w-full max-w-6xl mx-auto relative z-10 animate-in fade-in zoom-in-95 duration-500">
         
-        {/* BOTÃO VOLTAR AMIGÁVEL */}
-        <a 
-          href="/" 
-          className="inline-flex items-center gap-2 text-rose-500 hover:text-rose-600 font-bold text-sm mb-8 bg-white px-5 py-2.5 rounded-full border-2 border-rose-100 shadow-sm transition-all hover:scale-105 active:scale-95"
-        >
-          <ArrowLeft className="w-4 h-4 stroke-[3]" /> Voltar para o Início
-        </a>
+        <Link 
+  to="/" 
+  className="inline-flex items-center gap-2 text-rose-500 hover:text-rose-600 font-bold text-sm mb-8 bg-white px-5 py-2.5 rounded-full border-2 border-rose-100 shadow-sm transition-all hover:scale-105 active:scale-95"
+>
+  <ArrowLeft className="w-4 h-4 stroke-[3]" /> Voltar para o Início
+</Link>
 
         {/* CABEÇALHO LÚDICO COM O MASCOTE */}
         <div className="text-center mb-12 flex flex-col items-center">
